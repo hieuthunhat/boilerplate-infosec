@@ -9,7 +9,7 @@ app.use(helmet.xssFilter());
 app.use(helmet.noSniff());
 app.use(helmet.ieNoOpen());
 app.use(helmet.hsts({maxAge: 90*24*60*60}));
-
+app.use(helmet.dnsPrefetchControl({options: {allow: true}}));
   
 
 
